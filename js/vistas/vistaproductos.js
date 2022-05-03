@@ -25,18 +25,6 @@ export class VistaProductos{
 
     cargarProductos(productos){
 
-        /**
-         * 
-         * <div class="cajas">
-                <div class="caja">
-                    <img src="img/audi.jpg" alt="Audi RS 3 Sedan" />
-                    <p>Audi RS 3 Sedan</p>
-                    <p>78.840,00 EUR</p>
-                    <button>Añadir</button>
-                </div>
-            </div>
-         */
-
         let cajas = document.createElement('div')
         divProducto. appendChild(cajas)
         cajas.classList.add('cajas')
@@ -55,6 +43,7 @@ export class VistaProductos{
                 let p = document.createElement('p')
                 caja.appendChild(p)
                 p.textContent = producto.nombre 
+                p.style = 'color:steelblue'
 
                 let p2 = document.createElement('p')
                 caja.appendChild(p2)

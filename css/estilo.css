@@ -1,8 +1,7 @@
 
 body{
-
     background-size: cover;
-    background-position: center center;
+    background-image: url("../img/fondo.jpg");
     background-attachment: fixed;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -130,4 +129,17 @@ button{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 100px;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+    color: palevioletred;
+}
+
+footer{
+    background-color:rgb(245, 213, 153);
+    color: rgb(28, 144, 103);
+    padding: 10px 10px;
+    text-align: left;
+    font-style: italic;
 }

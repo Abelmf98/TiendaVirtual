@@ -1,5 +1,5 @@
 import {VistaProductos} from './vistas/vistaproductos.js'
-import { VistaCarrito } from './vistas/vistacarrito.js'
+import {VistaCarrito} from './vistas/vistacarrito.js'
 import {Modelo} from './modelos/modelo.js'
 
 class Tienda{
@@ -28,6 +28,11 @@ class Tienda{
 
         this.vistaCarrito.mostrar(false)
         this.vistaProductos.mostrar(true)
+    }
+
+    anadirCarrito(producto){
+        this.modelo.push(producto)
+        this.vistaProductos.cantidadProductos(this.modelo.carrito.length)
     }
 }
 
