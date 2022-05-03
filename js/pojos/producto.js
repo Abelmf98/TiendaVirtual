@@ -1,7 +1,9 @@
 export class Producto{
-    constructor(nombre, precio, imagen){
+
+    constructor(imagen, nombre, precio){
+
+        this.imagen = imagen
         this.nombre = nombre
         this.precio = precio
-        this.imagen = imagen
     }
 }

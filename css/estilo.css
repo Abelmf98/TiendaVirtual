@@ -1,19 +1,28 @@
+
 body{
-    background-color: silver;
-    margin: 0 auto;
+
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-h1{
+header{
+
+    background-color: rgb(245, 213, 153);
     color: white;
-    margin: 0;
-    width: 100%;
-    background-color: black;
-    display: block;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0;
+}
+
+h1{
+
+    font-family: 'Bebas Neue';
     text-align: center;
 }
 
-.header li {
+.header-div li {
     text-align: center;
     width: 100%;
     margin-bottom: 3px !important;
@@ -22,7 +31,7 @@ h1{
     padding: 0;
 }
   
-.header i {
+.header-div i {
     display: block;
     margin: 0 auto 10px auto;
     width: 32px;
@@ -36,7 +45,7 @@ h1{
     padding-top: 5px;
 }
 
-.header a {
+.header-div a {
     text-decoration: none;
     width: 100%;
     height: 100%;
@@ -45,15 +54,15 @@ h1{
     padding: 0;
 }
 
-.header a span {
-    color: black;
+.header-div a span {
+    color: white;
     font-size: 15px;
     padding: 5px 0 10px 0;
     display: block;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-/* CSS para posicionar el bade cerca del carrito*/
+
 .carrito {
     position: relative;
 }
@@ -73,30 +82,46 @@ h1{
     padding: 2px;
 }
 
-.contenedor{
+main{
+
+    padding: 30px 20px;
+}
+
+#divProducto, #divCarrito{
+
+    display: none;
+}
+
+.cajas{
+
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+.caja{
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 10px;
+    color: rgb(23, 100, 27);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
 .caja img{
     width: 350px;
+    height: 300px;
     border-radius: 30px;
     box-shadow: 0px 5px 10px rgb(0,0,0,0.12);
 }
 
-.caja{
-    margin: 15px;
-}
+.caja p, .caja button{
 
-p{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.precio{
-    color: green;
-    font-weight: bold;
+    margin-top: 10px;
 }
 
 button{

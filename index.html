@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet"/>
-    <title>Tienda Virtual</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Julio Antonio Ramos Gago (jramosgago.guadalupe@alumnado.fundacionloyola.net)" />
+    <meta name="description" content="Tienda virtual desarrollada en javascript como ejercicio de DWEC" />
+    <title>The Sweet Crown</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/estilo.css" />
+    <!--Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Shop Center</h1>
-    <div class="cart-menu align-items-center d-flex">
-        <div class="header">
-          <ul>
-            <li>
-              <a href="" class="carrito"><i class="fas fa-shopping-cart"></i><span>Carrito</span>
-                <span id="menucarrito" data-action="cart-can" class="badge rounded-circle">2</span>
-              </a>
-            </li>
-          </ul>
+    <header>
+        <h1>The Sweet Crown</h1>
+        <div class="cart-menu align-items-center d-flex">
+            <div class="header-div">
+              <ul>
+                <li>
+                  <a href="" class="carrito"><i class="fas fa-shopping-cart"></i><span>Carrito</span>
+                    <span id="menucarrito" data-action="cart-can" class="badge rounded-circle">2</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
         </div>
-    </div>
-    <div class="contenedor">
-        <div class="caja caja1" id="divProductos">
-            <img src="img/tarta-queso.jpg" alt="producto">
-            <p>Producto</p>
-            <p class="precio">10€</p>
-            <button>Añadir</button>
+    </header>
+    <main>
+        <div id="divProducto">
+            <h1>Productos</h1>
+            <button id="verCarrito">Carrito</button>
         </div>
-        <div class="caja caja1">
-            <img src="img/tarta-queso.jpg" alt="producto">
-            <p>Producto</p>
-            <p class="precio">10€</p>
-            <button>Añadir</button>
+        <div id="divCarrito">
+            <h1>Carrito</h1>
+            <button id="verProductos">Productos</button>
         </div>
-        <div class="caja caja1">
-            <img src="img/tarta-queso.jpg" alt="producto">
-            <p>Producto</p>
-            <p class="precio">10€</p>
-            <button>Añadir</button>
-        </div>
-        <div class="caja caja1">
-            <img src="img/tarta-queso.jpg" alt="producto">
-            <p>Producto</p>
-            <p class="precio">10€</p>
-            <button>Añadir</button>
-        </div>
-        <div class="caja caja1">
-            <img src="img/tarta-queso.jpg" alt="producto">
-            <p>Producto</p>
-            <p class="precio">10€</p>
-            <button>Añadir</button>
-        </div>
-    </div>
-    <script src="js/tienda.js" type="module"></script> 
+        <!--Script JS-->
+        <script type="module" src="js/tienda.js"></script>
+    </main>
 </body>
 </html>

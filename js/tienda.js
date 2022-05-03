@@ -1,36 +1,33 @@
-/**
- * Controlador principal de la aplicacion
- */
-
-import{vistaProductos} from './vistas/vistaproductos.js'
-import{Modelo} from './modelos/modelo.js'
-import {vistaCarrito} from './vistas/vistacarrito.js'
+import {VistaProductos} from './vistas/vistaproductos.js'
+import { VistaCarrito } from './vistas/vistacarrito.js'
+import {Modelo} from './modelos/modelo.js'
 
 class Tienda{
-    constructor(vista, modelo){
-        this.vista = vista
-        this.modelo = modelo
+
+    constructor(){
+
+        window.onload = this.iniciar.bind(this)
     }
 
     iniciar(){
-        this.vistaCarrito = new vistaCarrito(this)
-        this.modelo = new Modelo()
-        this.vistaProductos = new vistaProductos(this, this.modelo.getProductos())
-        this.vistaProductos.mostrar(true)
-    }
 
-    verProductos(){
+        this.modelo = new Modelo()
+        this.vistaProductos = new VistaProductos(this, this.modelo.getProductos())
+        this.vistaCarrito = new VistaCarrito(this)
+
         this.vistaProductos.mostrar(true)
-        this.vistaCarrito.mostrar(false)
     }
 
     verCarrito(){
+
         this.vistaProductos.mostrar(false)
         this.vistaCarrito.mostrar(true)
     }
 
-    anadirCarrito(producto){
-        this.modelo.carrito.push(producto)
+    verProductos(){
+
+        this.vistaCarrito.mostrar(false)
+        this.vistaProductos.mostrar(true)
     }
 }
 
