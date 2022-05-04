@@ -34,6 +34,7 @@ export class VistaProductos{
                 let caja = document.createElement('div')
                 cajas.appendChild(caja)
                 caja.classList.add('caja')
+                caja.onmouseover = this.ofertas
 
                 let img = document.createElement('img')
                 caja.appendChild(img)
@@ -53,12 +54,29 @@ export class VistaProductos{
                 caja.appendChild(button)
                 button.textContent = 'Añadir'
                 
-                button.onclick = this.anadirCarrito.bind(this, producto) 
+                button.onclick = this.anadirCarrito.bind(this, producto)
             }
     }
 
     anadirCarrito(producto){
-
+        console.log('Pulsado')
+        console.log(producto)
         this.controlador.anadirCarrito(producto)
     }
+
+    setNumProductos(entero){
+        document.getElementById('menucarrito').textContent = entero   
+    }
+
+    ofertas(divProducto){
+        /* <div class="cajas"><div class="caja">
+        <img src="../img/tarta-queso.jpg">
+        <p style="color: steelblue;">Tarta de queso</p>
+        <p>10.00€</p>
+        <P style="color: tomato;">¡¡¡OFERTA!!!</P>
+        <button>Añadir</button> */
+
+
+    }
+
 }

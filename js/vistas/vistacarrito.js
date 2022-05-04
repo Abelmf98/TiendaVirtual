@@ -18,7 +18,8 @@ export class VistaCarrito{
     }
 
     verProductos(){
-
         this.controlador.verProductos()
     }
+
+    
 }
