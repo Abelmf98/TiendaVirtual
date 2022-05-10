@@ -76,7 +76,12 @@ export class VistaProductos{
         <P style="color: tomato;">¡¡¡OFERTA!!!</P>
         <button>Añadir</button> */
 
+        let caja = document.createElement('div')
+        caja.classList.add('caja')
 
+        let divOferta = document.createElement('div')
+        caja.appendChild(divOferta)
+        divOferta.classList.add('oferta-class')
     }
 
 }

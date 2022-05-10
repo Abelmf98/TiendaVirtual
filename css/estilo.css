@@ -130,6 +130,7 @@ button{
     width: 100px;
     border-radius: 4px;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 button:hover{
@@ -142,4 +143,34 @@ footer{
     padding: 10px 10px;
     text-align: left;
     font-style: italic;
+    bottom: 0;
+    left: 0;
+}
+
+#verCarrito, #verProductos{
+    margin-left: 46.5%;
+}
+
+.formulario{
+        text-align: center;
+        background-color: rgb(245, 213, 153);
+        color: rgb(28, 144, 103);
+        padding: 20px 0;
+        width: 70%;
+        margin:auto;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+
+form input{
+    width: 35%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+h4{
+    color:rgb(28, 144, 103);
 }
