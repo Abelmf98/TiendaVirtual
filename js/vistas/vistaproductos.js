@@ -26,7 +26,7 @@ export class VistaProductos{
     cargarProductos(productos){
 
         let cajas = document.createElement('div')
-        divProducto. appendChild(cajas)
+        divProducto.appendChild(cajas)
         cajas.classList.add('cajas')
 
             for (let producto of productos) {
@@ -34,7 +34,11 @@ export class VistaProductos{
                 let caja = document.createElement('div')
                 cajas.appendChild(caja)
                 caja.classList.add('caja')
-                caja.onmouseover = this.ofertas
+
+                if(producto.oferta){
+                    caja.onmouseover = this.ofertas.bind(this, producto, caja)
+                    caja.onmouseout = this.ocultar.bind(this, producto, caja)
+                }
 
                 let img = document.createElement('img')
                 caja.appendChild(img)
@@ -68,7 +72,7 @@ export class VistaProductos{
         document.getElementById('menucarrito').textContent = entero   
     }
 
-    ofertas(divProducto){
+    ofertas(producto, caja){
         /* <div class="cajas"><div class="caja">
         <img src="../img/tarta-queso.jpg">
         <p style="color: steelblue;">Tarta de queso</p>
@@ -76,12 +80,18 @@ export class VistaProductos{
         <P style="color: tomato;">¡¡¡OFERTA!!!</P>
         <button>Añadir</button> */
 
-        let caja = document.createElement('div')
-        caja.classList.add('caja')
+        let p3 = document.createElement('p')
+        caja.appendChild(p3)
+        p3.style='color: tomato'
+        p3.textContent = '¡¡¡OFERTA!!!'
 
-        let divOferta = document.createElement('div')
-        caja.appendChild(divOferta)
-        divOferta.classList.add('oferta-class')
     }
 
+    ocultar(producto, caja){
+        console.log(caja.onmouseout)
+
+        caja.getElementsByTagName('p')[2].remove()
+    }
+
+   
 }
