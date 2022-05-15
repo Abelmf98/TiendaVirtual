@@ -4,7 +4,7 @@ export class VistaCarrito{
 
         this.controlador = controlador
         document.getElementById('verProductos').onclick = this.verProductos.bind(this)
-        document.getElementById('boton').onclick = this.validaciones.bind(this)
+        document.getElementById('boton').onclick = this.validacionEdad.bind(this)
     }
     
     mostrar(ver){
@@ -22,12 +22,19 @@ export class VistaCarrito{
         this.controlador.verProductos()
     }
     
-    validaciones(){
-        let edad = document.getElementById('fecha').value
-        
+    validacionEdad(fecha){
+        var fechaHoy = new Date()
+        var fechaNacimiento = new Date(fecha)
+        var edad = fechaHoy.getFullYear() - fechaNacimiento.getFullYear()
+        var c = fechaHoy.getMonth() - fechaNacimiento.getMonth()
 
-        if(edad<18){
-            window.alert('Aun no puedes ir a la cárcel')
+        if(c<0 || (c === 0 && fechaHoy.getDate() < fechaNacimiento.getDate())){
+            edad --
         }
+
+        if(edad>=18)
+            window.alert("Mayor de 18 años")
+        else
+            window.alert("Menor de 18 años")
     }
 }
