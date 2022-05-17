@@ -23,6 +23,8 @@ export class VistaCarrito{
     }
     
     validacionEdad(fecha){
+        fecha = document.getElementById('fecha').value
+
         var fechaHoy = new Date()
         var fechaNacimiento = new Date(fecha)
         var edad = fechaHoy.getFullYear() - fechaNacimiento.getFullYear()
@@ -32,6 +34,8 @@ export class VistaCarrito{
             edad --
         }
 
+        console.log(edad)
+       
         if(edad>=18)
             window.alert("Mayor de 18 años")
         else
