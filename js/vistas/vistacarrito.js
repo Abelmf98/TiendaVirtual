@@ -4,6 +4,7 @@ export class VistaCarrito{
 
         this.controlador = controlador
         document.getElementById('verProductos').onclick = this.verProductos.bind(this)
+        /* document.getElementById('boton').onclick = this.validarLetraDNI.bind(this) */
         document.getElementById('boton').onclick = this.validacionEdad.bind(this)
     }
     
@@ -20,6 +21,36 @@ export class VistaCarrito{
 
     verProductos(){
         this.controlador.verProductos()
+    }
+
+    validarLetraDNI(dni){
+        dni = document.getElementById('dni').value
+
+        var numero, letr, letra, regExp
+
+        regExp = /^\d{8}[a-zA-Z]$/
+        
+        if(regExp.test (dni) == true){
+
+            numero = dni.substr(0,dni.length-1)
+            letr = dni.substr(dni.length-1,1)
+            numero = numero % 23
+            letra='TRWAGMYFPDXBNJZSQVHLCKET'
+            letra=letra.substring(numero,numero+1)
+
+            if (letra!=letr.toUpperCase()){
+
+                alert('Dni erroneo, la letra del NIF no se corresponde')
+            }else{
+
+                console.log('Dni correcto')
+            }
+        }else{
+            
+            alert('Dni erroneo, formato no válido')
+        }
+    
+
     }
     
     validacionEdad(fecha){
