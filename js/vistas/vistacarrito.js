@@ -4,8 +4,7 @@ export class VistaCarrito{
 
         this.controlador = controlador
         document.getElementById('verProductos').onclick = this.verProductos.bind(this)
-        /* document.getElementById('boton').onclick = this.validarLetraDNI.bind(this) */
-        document.getElementById('boton').onclick = this.validacionEdad.bind(this)
+        document.getElementById('boton').onclick = this.validar.bind(this)
     }
     
     mostrar(ver){
@@ -21,6 +20,11 @@ export class VistaCarrito{
 
     verProductos(){
         this.controlador.verProductos()
+    }
+
+    validar(){
+        this.validarLetraDNI()
+        this.validacionEdad()
     }
 
     validarLetraDNI(dni){
@@ -40,14 +44,14 @@ export class VistaCarrito{
 
             if (letra!=letr.toUpperCase()){
 
-                alert('Dni erroneo, la letra del NIF no se corresponde')
+                console.log('Dni erroneo, la letra del NIF no se corresponde')
             }else{
 
                 console.log('Dni correcto')
             }
         }else{
             
-            alert('Dni erroneo, formato no válido')
+            console.log('Dni erroneo, formato no válido')
         }
     
 
