@@ -25,6 +25,8 @@ export class VistaCarrito{
     validar(){
         this.validarLetraDNI()
         this.validacionEdad()
+
+        document.getElementById('form').style.display="none"
     }
 
     validarLetraDNI(dni){

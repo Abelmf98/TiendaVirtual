@@ -13,6 +13,8 @@ export class Modelo{
         this.productos[2] = new Producto('./img/tpastelera.jpg', 'Tarta de crema pastelera', 12.50, false)
         this.productos[3] = new Producto('./img/chocolate.jpg', 'Tarta de chocolate', 14, true)
         this.productos[4] = new Producto('./img/brazogitano.jpeg', 'Brazo de gitano', 20, false)
+
+        /* fetch('../../json/producto.json') */
     }
 
     getProductos(){
