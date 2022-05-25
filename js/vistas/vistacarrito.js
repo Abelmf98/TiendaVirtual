@@ -27,6 +27,7 @@ export class VistaCarrito{
         this.validacionEdad()
 
         document.getElementById('form').style.display="none"
+        document.getElementById('productoCarritos').style.display="block"
     }
 
     validarLetraDNI(dni){
@@ -77,5 +78,42 @@ export class VistaCarrito{
             window.alert("Mayor de 18 años")
         else
             window.alert("Menor de 18 años")
+    }
+
+    recogerCarrito(producto){
+        /* <div class="cajas">
+            <div class="cajam">
+                <img src="../img/tarta-queso.jpg">
+                <p style="color: steelblue;">Tarta de queso</p>
+                <p>10.00€</p>
+                <span>2 unidades</span>
+            </div>
+            <div class="cajam">
+                <img src="../img/tpastelera.jpg">
+                <p style="color: steelblue;">Tarta de crema pastelera</p>
+                <p>12.00€</p>
+            </div>     
+        </div> */
+        let cajas = document.createElement('div')
+        productoCarritos.appendChild(cajas)
+        cajas.classList.add('cajas')
+
+        let caja = document.createElement('div')
+            cajas.appendChild(caja)
+            caja.classList.add('caja')
+
+            let img = document.createElement('img')
+            caja.appendChild(img)
+            img.src=producto.imagen
+            
+            
+            let p = document.createElement('p')
+            caja.appendChild(p)
+            p.textContent = producto.nombre 
+            p.style = 'color:steelblue'
+
+            let p2 = document.createElement('p')
+            caja.appendChild(p2)
+
     }
 }

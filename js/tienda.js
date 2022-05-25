@@ -33,6 +33,7 @@ class Tienda{
     anadirCarrito(producto){
         this.modelo.push(producto)
         this.vistaProductos.setNumProductos(this.modelo.carritos.length)
+        this.vistaCarrito.recogerCarrito(producto)
     }
     
 }
